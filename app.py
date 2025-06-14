@@ -14,7 +14,7 @@ import os
 
 
 app = Flask(__name__)
-CORS(app, origins=["https://smartstudyscheduler-cmwz.onrender.com"])
+CORS(app, resources={r"/*": {"origins": "*"}})
 model = joblib.load('model.pkl')
 app.secret_key = os.environ.get('SECRET_KEY','defaultset')
 
