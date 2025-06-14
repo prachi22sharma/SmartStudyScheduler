@@ -34,7 +34,7 @@
     <div id="calendar"></div>
     <script>
         async function fetchTasks() {
-    const res = await fetch("http://127.0.0.1:5000/tasks");
+    const res = await fetch("http://smartstudyscheduler-cmwz.onrender.com/tasks");
     const data = await res.json();
 
     // Check if result is an array
@@ -82,7 +82,7 @@ list.innerHTML = ""; // Clear previous list
   
    
         async function deleteTask(index) {
-    await fetch(`http://127.0.0.1:5000/delete_task/${index}`, {
+    await fetch(`http://smartstudyscheduler-cmwz.onrender.com/delete_task/${index}`, {
         method: 'DELETE'
         });
     fetchTasks(); // Refresh task list after deletion
@@ -90,7 +90,7 @@ list.innerHTML = ""; // Clear previous list
         
         async function resetTasks() {
     if (confirm("Are you sure you want to delete all tasks?")) {
-        await fetch("http://127.0.0.1:5000/reset_tasks", {
+        await fetch("https://smartstudyscheduler-cmwz.onrender.com/reset_tasks", {
             method: "DELETE"
         });
         fetchTasks();  // Refresh the task list
@@ -107,7 +107,7 @@ const deadline = new Date(deadlineRaw).toISOString().split("T")[0];
             const user_id = document.getElementById("user_id").value;
             
             await
-            fetch("http://127.0.0.1:5000/add_task", {
+            fetch("https://smartstudyscheduler-cmwz.onrender.com/add_task", {
                 method: "POST",
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({title, hours, difficulty, user_id, deadline})

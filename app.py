@@ -10,12 +10,13 @@ from flask_cors import CORS
 from config import get_db_connection
 from werkzeug.security import generate_password_hash,check_password_hash
 import traceback
+import os
 
 
 app = Flask(__name__)
 CORS(app)
 model = joblib.load('model.pkl')
-app.secret_key = 'your_flask_key'
+app.secret_key = os.environ.get('SECRET_KEY','defaultset')
 
 @app.route('/generate-schedule', methods=['POST'])
 def generate_schedule():
