@@ -1,0 +1,249 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  margin: 20px;
+  color: #333;
+}
+
+/* Header */
+h1 {
+  color: #007bff;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+form input, form button {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex: 1 1 180px;
+}
+
+form button {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+/* Task List Styling */
+ul#taskList {
+  list-style-type: none;
+  padding: 0;
+  max-width: 700px;
+  margin: auto;
+}
+
+ul#taskList li {
+  background-color: #fff;
+  padding: 12px 18px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Delete Button */
+ul#taskList li button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+ul#taskList li button:hover {
+  background-color: #b02a37;
+}
+
+/* Message Box Styling */
+#messageBox {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.priority-1 {
+  color: red;
+  font-weight: bold;
+}
+.priority-2 {
+  color: orange;
+}
+.priority-3 {
+  color: green;
+}
+
+form {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+form input, form button {
+  min-width: 150px;
+  margin: 5px;
+}
+
+.logout-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #c0392b
+}
+
+.login-container {
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #0056b3;
+}
+
+.login-container p {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.register-container {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+.register-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.register-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.register-container button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 0;
+    width: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.register-container button:hover {
+    background-color: #0056b3;
+}
+
+.register-container p {
+    margin-top: 15px;
+}
+
+.register-container a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.register-container a:hover {
+    text-decoration: underline;
+}
+
+.dark-mode input,
+.dark-mode button {
+  background-color: #333;
+  color: white;
+  border: 1px solid #666;
+}
+
+/* Optional toggle switch styling */
+.switch {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.switch input { display: none; }
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px; width: 26px;
+  left: 4px; bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+input:checked + .slider {
+  background-color: #2196F3;
+}
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
