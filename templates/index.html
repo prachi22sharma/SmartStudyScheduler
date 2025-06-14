@@ -34,7 +34,7 @@
     <div id="calendar"></div>
     <script>
         async function fetchTasks() {
-    const res = await fetch("http://smartstudyscheduler-cmwz.onrender.com/tasks");
+    const res = await fetch("https://smartstudyscheduler-cmwz.onrender.com/tasks");
     const data = await res.json();
 
     // Check if result is an array
@@ -82,7 +82,7 @@ list.innerHTML = ""; // Clear previous list
   
    
         async function deleteTask(index) {
-    await fetch(`http://smartstudyscheduler-cmwz.onrender.com/delete_task/${index}`, {
+    await fetch(`https://smartstudyscheduler-cmwz.onrender.com/delete_task/${index}`, {
         method: 'DELETE'
         });
     fetchTasks(); // Refresh task list after deletion
