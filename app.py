@@ -15,7 +15,7 @@ import traceback
 app = Flask(__name__)
 CORS(app)
 model = joblib.load('model.pkl')
-app.secret_key = "your_flask_key"
+app.secret_key = 'your_flask_key'
 
 @app.route('/generate-schedule', methods=['POST'])
 def generate_schedule():
