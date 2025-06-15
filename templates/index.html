@@ -34,7 +34,7 @@
     <div id="calendar"></div>
     <script>
         async function fetchTasks() {
-    const res = await fetch("https://smartstudyscheduler-cmwz.onrender.com/tasks");
+    const res = await fetch("https://smartstudyscheduler-cnwz.onrender.com/tasks");
     const data = await res.json();
 
     // Check if result is an array
@@ -82,7 +82,7 @@ list.innerHTML = ""; // Clear previous list
   
    
         async function deleteTask(index) {
-    await fetch(`https://smartstudyscheduler-cmwz.onrender.com/delete_task/${index}`, {
+    await fetch(`https://smartstudyscheduler-cnwz.onrender.com/delete_task/${index}`, {
         method: 'DELETE'
         });
     fetchTasks(); // Refresh task list after deletion
@@ -90,7 +90,7 @@ list.innerHTML = ""; // Clear previous list
         
         async function resetTasks() {
     if (confirm("Are you sure you want to delete all tasks?")) {
-        await fetch("https://smartstudyscheduler-cmwz.onrender.com/reset_tasks", {
+        await fetch("https://smartstudyscheduler-cnwz.onrender.com/reset_tasks", {
             method: "DELETE"
         });
         fetchTasks();  // Refresh the task list
@@ -107,7 +107,7 @@ const deadline = new Date(deadlineRaw).toISOString().split("T")[0];
             const user_id = document.getElementById("user_id").value;
             
             await
-            fetch("https://smartstudyscheduler-cmwz.onrender.com/add_task", {
+            fetch("https://smartstudyscheduler-cnwz.onrender.com/add_task", {
                 method: "POST",
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({title, hours, difficulty, user_id, deadline})
