@@ -14,7 +14,7 @@ import os
 
 
 app = Flask(__name__)
-CORS(app, origins=["https://smartstudyscheduler-cmwz.onrender.com"], supports_credentials=True)
+CORS(app)
 model = joblib.load('model.pkl')
 app.secret_key = os.environ.get('SECRET_KEY','defaultset')
 
@@ -62,7 +62,9 @@ def get_tasks():
         if conn:
             conn.close
             
-
+@app.route("/test")
+def test():
+    return "CORS working!"
 
 
 @app.route('/add_task', methods=['POST'])
